@@ -1,12 +1,19 @@
 package org.yearup.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import org.yearup.data.CategoryDao;
 import org.yearup.data.ProductDao;
 import org.yearup.models.Category;
 import org.yearup.models.Product;
+import org.yearup.security.jwt.TokenProvider;
 
+import java.util.Collection;
 import java.util.List;
 
 // add the annotations to make this a REST controller
@@ -20,14 +27,17 @@ public class CategoriesController
 {
     private CategoryDao categoryDao;
     private ProductDao productDao;
+    private TokenProvider tokenProvider;
+
 
 
 
     // create an Autowired controller to inject the categoryDao and ProductDao
     @Autowired
-    public CategoriesController(CategoryDao categoryDao, ProductDao productDao) {
+    public CategoriesController(CategoryDao categoryDao, ProductDao productDao, TokenProvider tokenProvider) {
         this.categoryDao = categoryDao;
         this.productDao = productDao;
+        this.tokenProvider = tokenProvider;
     }
 
 
@@ -58,10 +68,31 @@ public class CategoriesController
 
     // add annotation to call this method for a POST action
     // add annotation to ensure that only an ADMIN can call this function
-    public Category addCategory(@RequestBody Category category)
+    @PostMapping()
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public Category addCategory(@RequestBody Category category, @RequestHeader ("Authorization") String authHeader)
     {
-        // insert the category
-        return null;
+        String token = authHeader.replace("Bearer ", "");
+        System.out.println("Received token: " + token);
+        if (!tokenProvider.validateToken(token)) {
+
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Invalid or expired token");
+        }
+        Authentication authentication = tokenProvider.getAuthentication(token);
+
+        String username = authentication.getName();
+        Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
+
+
+        try
+        {
+
+            return categoryDao.create(category);
+        }
+        catch(Exception ex)
+        {
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Oops... our bad.");
+        }
     }
 
     // add annotation to call this method for a PUT (update) action - the url path must include the categoryId
