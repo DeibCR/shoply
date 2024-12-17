@@ -208,11 +208,7 @@ VALUES  ('Cookware Set', 149.99, 3, 'A comprehensive set of high-quality cookwar
         ('Mixing Bowls Set', 29.99, 3, 'A set of versatile and durable mixing bowls for all your culinary creations.', 'mixing-bowls.jpg', 30, 1, 'Silver'),
         ('Measuring Cup Set', 14.99, 3, 'Accurately measure ingredients with this set of handy and stackable measuring cups.', 'measuring-cups.jpg', 50, 1, 'Green');
 
--- sample duplicates from "bug"
-INSERT INTO products (name, price, category_id, description, image_url, stock, featured, color)
-VALUES  ('Laptop', 999.99, 1, 'A high-performance laptop for work and entertainment.', 'laptop.jpg', 30, 0, 'Gray'),
-        ('Laptop', 999.99, 1, 'A high-performance gaming laptop.', 'laptop.jpg', 30, 0, 'Gray'),
-        ('Tea Kettle', 29.99, 3, 'Brew a perfect cup of tea with this classic tea kettle.', 'tea-kettle.jpg', 50, 1, 'White');
+
 
 -- add shopping cart items
 INSERT INTO shopping_cart (user_id, product_id, quantity)

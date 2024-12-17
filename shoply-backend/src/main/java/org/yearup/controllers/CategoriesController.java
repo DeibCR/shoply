@@ -109,7 +109,7 @@ public class CategoriesController
         try {
             categoryDao.update(id,category);
         } catch (Exception ex){
-            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error updating category.");
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Oops... our bad");
         }
     }
 
@@ -128,7 +128,7 @@ public class CategoriesController
             categoryDao.delete(id);
             return ResponseEntity.noContent().build();
         } catch (Exception ex) {
-            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error deleting category.");
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Oops... our bad");
         }
     }
 }
