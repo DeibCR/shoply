@@ -2,6 +2,7 @@ package org.yearup.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -73,21 +74,18 @@ public class CategoriesController
     public Category addCategory(@RequestBody Category category, @RequestHeader ("Authorization") String authHeader)
     {
         String token = authHeader.replace("Bearer ", "");
-        System.out.println("Received token: " + token);
+
         if (!tokenProvider.validateToken(token)) {
 
             throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Invalid or expired token");
         }
-        Authentication authentication = tokenProvider.getAuthentication(token);
 
-        String username = authentication.getName();
-        Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
 
 
         try
         {
-
-            return categoryDao.create(category);
+            categoryDao.create(category);
+            return ResponseEntity.status(HttpStatus.CREATED).body(category).getBody();
         }
         catch(Exception ex)
         {
@@ -97,16 +95,36 @@ public class CategoriesController
 
     // add annotation to call this method for a PUT (update) action - the url path must include the categoryId
     // add annotation to ensure that only an ADMIN can call this function
+    @PutMapping("{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public void updateCategory(@PathVariable int id, @RequestBody Category category)
     {
         // update the category by id
+        if (categoryDao.getById(id) ==null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Category not found");
+        }
+        try {
+            categoryDao.update(id,category);
+        } catch (Exception ex){
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error updating category.");
+        }
     }
 
 
     // add annotation to call this method for a DELETE action - the url path must include the categoryId
     // add annotation to ensure that only an ADMIN can call this function
+    @DeleteMapping("{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public void deleteCategory(@PathVariable int id)
     {
         // delete the category by id
+        if (categoryDao.getById(id) == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Category not found.");
+        }
+        try {
+            categoryDao.delete(id);
+        } catch (Exception ex) {
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error deleting category.");
+        }
     }
 }
