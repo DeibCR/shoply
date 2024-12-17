@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import org.yearup.data.CategoryDao;
@@ -14,7 +12,6 @@ import org.yearup.models.Category;
 import org.yearup.models.Product;
 import org.yearup.security.jwt.TokenProvider;
 
-import java.util.Collection;
 import java.util.List;
 
 // add the annotations to make this a REST controller
@@ -52,10 +49,16 @@ public class CategoriesController
 
     // add the appropriate annotation for a get action
     @GetMapping("{id}")
-    public Category getById(@PathVariable int id)
+    public ResponseEntity<Object> getById(@PathVariable int id)
     {
         // get the category by id
-        return categoryDao.getById(id);
+        Category category = categoryDao.getById(id);
+
+        if (category == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+
+        return ResponseEntity.ok(category);
     }
 
     // the url to return all products in category 1 would look like this
@@ -71,7 +74,7 @@ public class CategoriesController
     // add annotation to ensure that only an ADMIN can call this function
     @PostMapping()
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public Category addCategory(@RequestBody Category category, @RequestHeader ("Authorization") String authHeader)
+    public ResponseEntity<Category> addCategory(@RequestBody Category category, @RequestHeader ("Authorization") String authHeader)
     {
         String token = authHeader.replace("Bearer ", "");
 
@@ -84,8 +87,8 @@ public class CategoriesController
 
         try
         {
-            categoryDao.create(category);
-            return ResponseEntity.status(HttpStatus.CREATED).body(category).getBody();
+            Category createdCategory = categoryDao.create(category);
+            return ResponseEntity.status(HttpStatus.CREATED).body(createdCategory);
         }
         catch(Exception ex)
         {
@@ -115,7 +118,7 @@ public class CategoriesController
     // add annotation to ensure that only an ADMIN can call this function
     @DeleteMapping("{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public void deleteCategory(@PathVariable int id)
+    public ResponseEntity<Object> deleteCategory(@PathVariable int id)
     {
         // delete the category by id
         if (categoryDao.getById(id) == null) {
@@ -123,6 +126,7 @@ public class CategoriesController
         }
         try {
             categoryDao.delete(id);
+            return ResponseEntity.noContent().build();
         } catch (Exception ex) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error deleting category.");
         }
