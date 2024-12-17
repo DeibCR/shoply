@@ -9,6 +9,7 @@ header
     padding: 5px 15px;
     border-bottom: solid 1px #555;
     box-shadow: 5px 2px #eee;
+
 }
 
 header img
@@ -118,29 +119,72 @@ main > .content-form .cart-item
     flex-direction: column;
 
     justify-content: space-between;
+     align-items: center; //
     /*width: 30%;*/
-    border: solid 1px #ccc;
-    padding: 5px;
-    border-radius: 5px;
-    margin: 5px;
+    width: 400px; //
+    height: 350px; //
+    border: solid 1px #e0e0e0;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+    text-align: center;
+    box-sizing: border-box;
+    transform-origin: center;
+
+    }
+
+/* Hover Effect */
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
 }
 .product  .photo
 {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
     padding: 0 10px 10px 10px;
 }
 .product  .photo > img
 {
-    width: 33%;
-    cursor: pointer;
-    border: solid 1px #ccc;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     transition: transform 0.3s ease;
 }
+/* Zoom effect on image hover */
+.product .photo img:hover {
+    transform: scale(1.1);
+}
+
 
 .product .price
 {
-    font-weight: 900;
-    color: #924a24;
+    font-weight: Bold;
+    font-size: 1.6em;
+    color: #ff5722;
+    margin: 20px 0;
+}
+
+.product .description {
+
+    font-size: 1.2em;
+    color: #8C8C89;
+    padding: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+
 }
 
 .modal-body img
@@ -151,7 +195,28 @@ main > .content-form .cart-item
 .product > .add-button
 {
     display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: auto;
 }
+
+.product .add-button .btn {
+    background-color: #338A86;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 11px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.product .add-button .btn:hover {
+    background-color: #274948;
+}
+
 
 .visible
 {
