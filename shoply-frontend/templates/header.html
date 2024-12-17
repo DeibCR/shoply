@@ -1,12 +1,12 @@
 {{#loggedin}}
 <div id="links">
-    <img src="/images/logo.png" alt="eashshop logo">
+    <img src="/images/logo.png" alt="eashshop logo" onclick="loadHome()">
     <a href="#" onclick="loadHome()">Home</a>
     <a href="#" onclick="editProfile()">Profile</a>
     <a href="#" onclick="showCart()">View Cart</a>
 </div>
 
-<div>
+<div class="user-info">
     Welcome&nbsp;<span style="font-weight: bold">{{username}}</span>&nbsp;|&nbsp;<a href="#" onclick="userService.logout();return false;">logout</a>
     <div class="cart" onclick="showCart()">
         <i class="fa-solid fa-cart-shopping"></i>
@@ -15,7 +15,7 @@
 </div>
 {{/loggedin}}
 {{#loggedout}}
-<div id="user-info">
+<div id="links">
     <img src="/images/logo.png" alt="eashshop logo">
     <a href="#" onclick="loadHome()">Home</a>
 </div>
