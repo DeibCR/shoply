@@ -10,9 +10,9 @@ class ShoppingCartService {
     addToCart(productId)
     {
         const url = `${config.baseUrl}/cart/products/${productId}`;
-        // const headers = userService.getHeaders();
+        const headers = userService.getHeaders();
 
-        axios.post(url, {})// ,{headers})
+        axios.post(url, {}, { headers })
             .then(response => {
                 this.setCart(response.data)
 
@@ -68,7 +68,7 @@ class ShoppingCartService {
 
     loadCartPage()
     {
-        // templateBuilder.build("cart", this.cart, "main");
+         templateBuilder.build("cart", this.cart, "main");
 
         const main = document.getElementById("main")
         main.innerHTML = "";
@@ -98,7 +98,7 @@ class ShoppingCartService {
         contentDiv.appendChild(cartHeader)
         main.appendChild(contentDiv);
 
-        // let parent = document.getElementById("cart-item-list");
+         let parent = document.getElementById("cart-item-list");
         this.cart.items.forEach(item => {
             this.buildItem(item, contentDiv)
         });

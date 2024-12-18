@@ -96,6 +96,8 @@ class ProductService {
                  let data = {};
                  data.products = response.data;
 
+                 data.products.sort((a, b) => a.price - b.price);
+
                  data.products.forEach(product => {
                      if(!this.hasPhoto(product.imageUrl))
                      {
