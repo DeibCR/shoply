@@ -66,63 +66,82 @@ class ShoppingCartService {
 
     }
 
-    loadCartPage()
-    {
-         templateBuilder.build("cart", this.cart, "main");
+    loadCartPage() {
 
-        const main = document.getElementById("main")
+        console.log('Cart Data:', this.cart);
+
+
+        const main = document.getElementById("main");
+        if (!main) {
+            console.error("Main container not found.");
+            return;
+        }
+
+
         main.innerHTML = "";
-
         let div = document.createElement("div");
         div.classList="filter-box";
         main.appendChild(div);
 
-        const contentDiv = document.createElement("div")
+
+        const contentDiv = document.createElement("div");
         contentDiv.id = "content";
         contentDiv.classList.add("content-form");
 
-        const cartHeader = document.createElement("div")
-        cartHeader.classList.add("cart-header")
 
-        const h1 = document.createElement("h1")
+        const cartHeader = document.createElement("div");
+        cartHeader.classList.add("cart-header");
+
+        const h1 = document.createElement("h1");
         h1.innerText = "Cart";
         cartHeader.appendChild(h1);
 
         const button = document.createElement("button");
-        button.classList.add("btn")
-        button.classList.add("btn-danger")
+        button.classList.add("btn", "btn-danger");
         button.innerText = "Clear";
         button.addEventListener("click", () => this.clearCart());
-        cartHeader.appendChild(button)
+        cartHeader.appendChild(button);
 
-        contentDiv.appendChild(cartHeader)
+        contentDiv.appendChild(cartHeader);
         main.appendChild(contentDiv);
 
-         let parent = document.getElementById("cart-item-list");
-        this.cart.items.forEach(item => {
-            this.buildItem(item, contentDiv)
-        });
+
+        const itemListContainer = document.createElement("div");
+        itemListContainer.id = "cart-item-list";
+
+        if (this.cart.items.length > 0) {
+            this.cart.items.forEach(item => {
+                this.buildItem(item, itemListContainer);
+            });
+        } else {
+            const emptyMessage = document.createElement("p");
+            emptyMessage.innerText = "Your cart is empty.";
+            itemListContainer.appendChild(emptyMessage);
+        }
+
+        contentDiv.appendChild(itemListContainer);
     }
 
-    buildItem(item, parent)
-    {
+    buildItem(item, parent) {
         let outerDiv = document.createElement("div");
         outerDiv.classList.add("cart-item");
 
         let div = document.createElement("div");
         outerDiv.appendChild(div);
-        let h4 = document.createElement("h4")
+
+        let h4 = document.createElement("h4");
         h4.innerText = item.product.name;
         div.appendChild(h4);
 
         let photoDiv = document.createElement("div");
-        photoDiv.classList.add("photo")
+        photoDiv.classList.add("photo");
         let img = document.createElement("img");
-        img.src = `/images/products/${item.product.imageUrl}`
+        img.src = `/images/products/${item.product.imageUrl}`;
         img.addEventListener("click", () => {
-            showImageDetailForm(item.product.name, img.src)
-        })
-        photoDiv.appendChild(img)
+            showImageDetailForm(item.product.name, img.src);
+        });
+        photoDiv.appendChild(img);
+
         let priceH4 = document.createElement("h4");
         priceH4.classList.add("price");
         priceH4.innerText = `$${item.product.price}`;
@@ -133,13 +152,13 @@ class ShoppingCartService {
         descriptionDiv.innerText = item.product.description;
         outerDiv.appendChild(descriptionDiv);
 
-        let quantityDiv = document.createElement("div")
+        let quantityDiv = document.createElement("div");
         quantityDiv.innerText = `Quantity: ${item.quantity}`;
-        outerDiv.appendChild(quantityDiv)
-
+        outerDiv.appendChild(quantityDiv);
 
         parent.appendChild(outerDiv);
     }
+
 
     clearCart()
     {
