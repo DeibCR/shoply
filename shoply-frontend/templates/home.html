@@ -21,38 +21,37 @@
         <input type="range" class="form-range" id="max-price" min="0" max="1500" value="1500" onchange="setMaxPrice(this)">
     </div>
 
-    <div class="form-floating mb-3">
-        <select name="" id="color-select" class="form-select"
-                onchange="setColor(this)"
-        >
-            <option value="">Show All</option>
-            <option>Black</option>
-            <option>Blue</option>
-            <option>Brown</option>
-            <option>Burgundy</option>
-            <option>Charcoal</option>
-            <option>Clear</option>
-            <option>Dark BLue</option>
-            <option>Gray</option>
-            <option>Green</option>
-            <option>Khaki</option>
-            <option>Lavender</option>
-            <option>Maroon</option>
-            <option>Mint</option>
-            <option>Navy</option>
-            <option>Olive</option>
-            <option>Orange</option>
-            <option>Pink</option>
-            <option>Red</option>
-            <option>Silver</option>
-            <option>Tan</option>
-            <option>Teal</option>
-            <option>Turquoise</option>
-            <option>White</option>
-            <option>Yellow</option>
-        </select>
-        <label for="color-select">Color</label>
-    </div>
+
+    <div class="color-swatches">
+    <div class="swatch" data-color="" onclick="setColor(this)" style="background-color: #ccc;" title="All"></div>
+    <div class="swatch" data-color="Black" onclick="setColor(this)" style="background-color: black;" title="Black"></div>
+    <div class="swatch" data-color="Blue" onclick="setColor(this)" style="background-color: blue;" title="Blue"></div>
+    <div class="swatch" data-color="Brown" onclick="setColor(this)" style="background-color: #A52A2A;" title="Brown"></div>
+    <div class="swatch" data-color="Burgundy" onclick="setColor(this)" style="background-color: #800020;" title="Burgundy"></div>
+    <div class="swatch" data-color="Charcoal" onclick="setColor(this)" style="background-color: #36454F;" title="Charcoal"></div>
+    <div class="swatch" data-color="Clear" onclick="setColor(this)" style="background-color: transparent;" title="Transparent"></div>
+    <div class="swatch" data-color="Dark BLue" onclick="setColor(this)" style="background-color: #00008B;" title="Dark BLue"></div>
+    <div class="swatch" data-color="Gray" onclick="setColor(this)" style="background-color: gray;" title="Gray"></div>
+    <div class="swatch" data-color="Green" onclick="setColor(this)" style="background-color: green;" title="Green"></div>
+    <div class="swatch" data-color="Khaki" onclick="setColor(this)" style="background-color: #F0E68C;" title="Khaki"></div>
+    <div class="swatch" data-color="Lavender" onclick="setColor(this)" style="background-color: lavender;" title="Lavender"></div>
+    <div class="swatch" data-color="Maroon" onclick="setColor(this)" style="background-color: maroon;" title="Maroon"></div>
+    <div class="swatch" data-color="Mint" onclick="setColor(this)" style="background-color: #98FF98;" title="Mint"></div>
+    <div class="swatch" data-color="Navy" onclick="setColor(this)" style="background-color: navy;" title="Navy"></div>
+    <div class="swatch" data-color="Olive" onclick="setColor(this)" style="background-color: olive;" title="Olive"></div>
+    <div class="swatch" data-color="Orange" onclick="setColor(this)" style="background-color: orange;" title="Orange"></div>
+    <div class="swatch" data-color="Pink" onclick="setColor(this)" style="background-color: pink;" title="Pink"></div>
+    <div class="swatch" data-color="Red" onclick="setColor(this)" style="background-color: red;" title="Red"></div>
+    <div class="swatch" data-color="Silver" onclick="setColor(this)" style="background-color: silver;" title="Silver"></div>
+    <div class="swatch" data-color="Tan" onclick="setColor(this)" style="background-color: tan;" title="Tan"></div>
+    <div class="swatch" data-color="Teal" onclick="setColor(this)" style="background-color: teal;" title="Teal"></div>
+    <div class="swatch" data-color="Turquoise" onclick="setColor(this)" style="background-color: turquoise;" title="Turquoise"></div>
+    <div class="swatch" data-color="White" onclick="setColor(this)" style="background-color: white;" title="White"></div>
+    <div class="swatch" data-color="Yellow" onclick="setColor(this)" style="background-color: yellow;" title="Yellow"></div>
+
+</div>
+
+
 
 </div>
 <div id="content" class="content"></div>

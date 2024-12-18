@@ -145,4 +145,11 @@ class ProductService {
 document.addEventListener('DOMContentLoaded', () => {
     productService = new ProductService();
 
+    const swatches = document.querySelectorAll('.swatch');
+        swatches.forEach(swatch => {
+            swatch.addEventListener('click', (event) => {
+                setColor(event.currentTarget);
+            });
+        });
+
 });

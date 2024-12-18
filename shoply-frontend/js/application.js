@@ -83,13 +83,27 @@ function setCategory(control)
     productService.search();
 
 }
-
+/*
 function setColor(control)
 {
     productService.addColorFilter(control.value);
     productService.search();
 
 }
+
+*/
+
+function setColor(element) {
+    const color = element.getAttribute('data-color');
+    productService.addColorFilter(color);
+
+
+    document.querySelectorAll('.swatch').forEach(swatch => swatch.classList.remove('active'));
+    element.classList.add('active');
+
+    productService.search();
+}
+
 
 function setMinPrice(control)
 {

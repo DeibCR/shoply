@@ -79,6 +79,25 @@ header div{
     gap:15px;
 }
 
+.color-swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.swatch:hover, .swatch.active {
+    border: 2px solid #333;
+}
+
 
 
 header .cart
