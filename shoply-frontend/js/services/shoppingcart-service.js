@@ -17,6 +17,7 @@ class ShoppingCartService {
                 this.setCart(response.data)
 
                 this.updateCartDisplay()
+                this.showNotification("Product added to cart!");
 
             })
             .catch(error => {
@@ -27,6 +28,25 @@ class ShoppingCartService {
 
                 templateBuilder.append("error", data, "errors")
             })
+    }
+
+    showNotification(message) {
+        const container = document.getElementById("notification-container");
+        if (!container) {
+            console.error("Notification container not found.");
+            return;
+        }
+
+        const notification = document.createElement("div");
+        notification.classList.add("notification");
+        notification.innerText = message;
+
+        container.appendChild(notification);
+
+        // Automatically remove the notification after 3 seconds
+        setTimeout(() => {
+            container.removeChild(notification);
+        }, 3000);
     }
 
     setCart(data)
