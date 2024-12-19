@@ -22,8 +22,7 @@ import java.util.Map;
 @PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
 
 @CrossOrigin
-public class ShoppingCartController
-{
+public class ShoppingCartController {
     private ShoppingCartDao shoppingCartDao;
     private UserDao userDao;
     private ProductDao productDao;
@@ -36,22 +35,16 @@ public class ShoppingCartController
 
 
     @GetMapping
-    public Map<String, Object> getCartForUser(Principal principal)
-    {
-        try
-        {
-            // get the currently logged in username
+    public Map<String, Object> getCartForUser(Principal principal) {
+        try {
             String userName = principal.getName();
-            // find database user by userId
             User user = userDao.getByUserName(userName);
             int userId = user.getId();
 
             ShoppingCart cart = shoppingCartDao.getCartForUser(userId);
 
-            //ToDO: maps to store the data
             Map<String, Object> response = new HashMap<>();
             Map<String, Object> items = new HashMap<>();
-            //ToDO: loop to cartItems to extract info
 
             for (Map.Entry<Integer, ShoppingCartItem> entry : cart.getItems().entrySet()) {
                 ShoppingCartItem item = entry.getValue();
@@ -76,50 +69,40 @@ public class ShoppingCartController
 
                 items.put(String.valueOf(product.getProductId()), itemDetails);
             }
-
-            //ToDo: populate the maps
-
             response.put("items", items);
             response.put("total", cart.getTotal());
 
-            return  response;
-        }
-        catch(Exception e)
-        {
+            return response;
+        } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Oops... our bad.");
         }
     }
 
     @PostMapping("/products/{productId}")
     @ResponseStatus(HttpStatus.CREATED)
-    public Map<String, Object> addProductToCart(Principal principal, @PathVariable int productId){
+    public Map<String, Object> addProductToCart(Principal principal, @PathVariable int productId) {
         try {
-            // get the currently logged in username
             String userName = principal.getName();
-            // find database user by userId
             User user = userDao.getByUserName(userName);
             int userId = user.getId();
 
-            shoppingCartDao.addProductToCart(userId,productId,1);
+            shoppingCartDao.addProductToCart(userId, productId, 1);
             return getCartForUser(principal);
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Failed to add product to cart.");
         }
     }
-
-
     @PutMapping("/products/{productId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateProductQuantity(Principal principal, @PathVariable int productId, @RequestBody ShoppingCartItem item){
+    public void updateProductQuantity(Principal principal, @PathVariable int productId, @RequestBody ShoppingCartItem item) {
         try {
-            // Get the currently logged-in username
             String userName = principal.getName();
             User user = userDao.getByUserName(userName);
             int userId = user.getId();
 
             shoppingCartDao.updateProductQuantity(userId, productId, item.getQuantity());
-        }catch (Exception e){
-            throw  new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Failed to update product quantity.");
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Failed to update product quantity.");
         }
     }
 
@@ -128,7 +111,6 @@ public class ShoppingCartController
     @ResponseStatus(HttpStatus.OK)
     public Map<String, Object> clearCart(Principal principal) {
         try {
-            // Get the currently logged-in username
             String userName = principal.getName();
             User user = userDao.getByUserName(userName);
             int userId = user.getId();
