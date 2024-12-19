@@ -63,6 +63,7 @@ public class ProductsController
 
     @PostMapping()
     @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @ResponseStatus(HttpStatus.CREATED)
     public Product addProduct(@RequestBody Product product)
     {
         try
