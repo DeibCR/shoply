@@ -17,7 +17,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("categories")
-// add annotation to allow cross site origin requests
 @CrossOrigin
 public class CategoriesController
 {
@@ -97,7 +96,7 @@ public class CategoriesController
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public void updateCategory(@PathVariable int id, @RequestBody Category category)
     {
-        // update the category by id
+
         if (categoryDao.getById(id) ==null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Category not found");
         }
@@ -114,7 +113,7 @@ public class CategoriesController
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<Object> deleteCategory(@PathVariable int id)
     {
-        // delete the category by id
+
         if (categoryDao.getById(id) == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Category not found.");
         }
