@@ -394,3 +394,10 @@ main > .content-form .cart-item
     margin-bottom: 2px !important;
 }
 
+.cart-total {
+    margin: 20px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: right;
+    color: #333;
+}

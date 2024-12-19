@@ -19,7 +19,8 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/cart")
-@PreAuthorize("hasRole('ROLE_USER')")
+@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
+
 @CrossOrigin
 public class ShoppingCartController
 {
