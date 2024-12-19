@@ -96,7 +96,7 @@ public class ShoppingCartController
     // https://localhost:8080/cart/products/15 (15 is the productId to be added
     @PostMapping("/products/{productId}")
     @ResponseStatus(HttpStatus.CREATED)
-    public void addProductToCart(Principal principal, @PathVariable int productId){
+    public Map<String, Object> addProductToCart(Principal principal, @PathVariable int productId){
         try {
             // get the currently logged in username
             String userName = principal.getName();
@@ -105,6 +105,7 @@ public class ShoppingCartController
             int userId = user.getId();
 
             shoppingCartDao.addProductToCart(userId,productId,1);
+            return getCartForUser(principal);
         }catch (Exception e){
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Failed to add product to cart.");
         }
@@ -138,7 +139,7 @@ public class ShoppingCartController
 
     @DeleteMapping
     @ResponseStatus(HttpStatus.OK)
-    public void clearCart(Principal principal) {
+    public Map<String, Object> clearCart(Principal principal) {
         try {
             // Get the currently logged-in username
             String userName = principal.getName();
@@ -147,6 +148,7 @@ public class ShoppingCartController
 
 
             shoppingCartDao.clearCartForUser(userId);
+            return getCartForUser(principal);
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Failed to clear the cart.");
         }
