@@ -1,0 +1,648 @@
+{
+	"id": "0af48023-eb0e-460e-8bdc-f1103b8e959d",
+	"name": "easyshop - ValidTest",
+	"timestamp": "2024-12-19T21:38:25.106Z",
+	"collection_id": "38406883-86216dd3-947d-45a2-a442-6f6556516de1",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 21,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-12-19T21:38:21.627Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "25ada30b-d4aa-4a0a-a044-a6a17ab02e94",
+			"name": "Register",
+			"url": "http://localhost:8080/register",
+			"time": 931,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Registration should succeed": true
+			},
+			"testPassFailCounts": {
+				"Registration should succeed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				931
+			],
+			"allTests": [
+				{
+					"Registration should succeed": true
+				}
+			]
+		},
+		{
+			"id": "62bde635-2835-4d8a-be6a-165990c367c4",
+			"name": "Login - new user",
+			"url": "http://localhost:8080/login",
+			"time": 177,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"User Login should create token": true
+			},
+			"testPassFailCounts": {
+				"User Login should create token": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				177
+			],
+			"allTests": [
+				{
+					"User Login should create token": true
+				}
+			]
+		},
+		{
+			"id": "8f2dc7a9-f3ea-4b61-b3ca-fdd50872fc5e",
+			"name": "Login - as admin",
+			"url": "http://localhost:8080/login",
+			"time": 80,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Admin Login should succeed": true
+			},
+			"testPassFailCounts": {
+				"Admin Login should succeed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				80
+			],
+			"allTests": [
+				{
+					"Admin Login should succeed": true
+				}
+			]
+		},
+		{
+			"id": "3c36e371-9b8e-44f5-b0bb-4512632514b6",
+			"name": "Get Categories",
+			"url": "http://localhost:8080/categories",
+			"time": 19,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Categories should be 3": true
+			},
+			"testPassFailCounts": {
+				"Categories should be 3": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Categories should be 3": true
+				}
+			]
+		},
+		{
+			"id": "29801049-6ddb-42f1-b6ed-4b6b310e03b1",
+			"name": "Add Category - not admin",
+			"url": "http://localhost:8080/categories",
+			"time": 58,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Category insert as non admin should fail": true
+			},
+			"testPassFailCounts": {
+				"Category insert as non admin should fail": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				58
+			],
+			"allTests": [
+				{
+					"Category insert as non admin should fail": true
+				}
+			]
+		},
+		{
+			"id": "435a7b84-a1d4-469c-9e86-31d2d8643c18",
+			"name": "Get Categories",
+			"url": "http://localhost:8080/categories",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Categories should be 3": true
+			},
+			"testPassFailCounts": {
+				"Categories should be 3": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Categories should be 3": true
+				}
+			]
+		},
+		{
+			"id": "2975f3c1-b6be-4652-8bf7-dc5fa563663e",
+			"name": "AddCategory - as admin",
+			"url": "http://localhost:8080/categories",
+			"time": 17,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Category insert as admin should succeed": true
+			},
+			"testPassFailCounts": {
+				"Category insert as admin should succeed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Category insert as admin should succeed": true
+				}
+			]
+		},
+		{
+			"id": "49ecda0e-50f2-4ca0-be00-860c585a2f46",
+			"name": "Get Categories - after add",
+			"url": "http://localhost:8080/categories",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Categories should be 4": true
+			},
+			"testPassFailCounts": {
+				"Categories should be 4": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Categories should be 4": true
+				}
+			]
+		},
+		{
+			"id": "330160b1-e9ff-4f62-bc85-e1918b2c77ad",
+			"name": "Get New Category By Id",
+			"url": "http://localhost:8080/categories/4",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Get new category by id should succeed": true
+			},
+			"testPassFailCounts": {
+				"Get new category by id should succeed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Get new category by id should succeed": true
+				}
+			]
+		},
+		{
+			"id": "5bdbe37f-7245-4ae0-91f4-827de83cbaed",
+			"name": "UpdateNewCategory - as admin",
+			"url": "http://localhost:8080/categories/4",
+			"time": 18,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "2c91b816-f1b3-4517-b4f4-4252fc294139",
+			"name": "Delete Category - as admin",
+			"url": "http://localhost:8080/categories/4",
+			"time": 14,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Delete new category should succeed": true
+			},
+			"testPassFailCounts": {
+				"Delete new category should succeed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Delete new category should succeed": true
+				}
+			]
+		},
+		{
+			"id": "da54d76c-af98-4bc6-91e1-b7ea79ce6b5a",
+			"name": "Get Category By Id - after delete",
+			"url": "http://localhost:8080/categories/4",
+			"time": 6,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Get new category after delete should not be found ": true
+			},
+			"testPassFailCounts": {
+				"Get new category after delete should not be found ": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Get new category after delete should not be found ": true
+				}
+			]
+		},
+		{
+			"id": "cc62ebbb-380c-4a82-96dd-307b3fd1a690",
+			"name": "Search Products",
+			"url": "http://localhost:8080/products?cat=1&minPrice=80&maxPrice=90",
+			"time": 27,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Number of products = 1": true
+			},
+			"testPassFailCounts": {
+				"Number of products = 1": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				27
+			],
+			"allTests": [
+				{
+					"Number of products = 1": true
+				}
+			]
+		},
+		{
+			"id": "7b5efdb2-f582-4816-9a8a-dd267d160820",
+			"name": "AddProduct - as admin",
+			"url": "http://localhost:8080/products",
+			"time": 23,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Product insert as admin should succeed": true,
+				"Check Product Name": true
+			},
+			"testPassFailCounts": {
+				"Product insert as admin should succeed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check Product Name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				23
+			],
+			"allTests": [
+				{
+					"Product insert as admin should succeed": true,
+					"Check Product Name": true
+				}
+			]
+		},
+		{
+			"id": "37471a4b-b3a8-4290-8ce1-ae11dafdcd95",
+			"name": "Get Cart while not logged in should not be authorized Copy",
+			"url": "http://localhost:8080/cart",
+			"time": 8,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Get cart logged in should return 401": true
+			},
+			"testPassFailCounts": {
+				"Get cart logged in should return 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Get cart logged in should return 401": true
+				}
+			]
+		},
+		{
+			"id": "b2a42f62-6d95-4854-b213-12acc710ba6b",
+			"name": "Add Product to Cart - no auth - should fail Copy",
+			"url": "http://localhost:8080/cart/products/12",
+			"time": 11,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Add to cart without login should fail": true
+			},
+			"testPassFailCounts": {
+				"Add to cart without login should fail": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Add to cart without login should fail": true
+				}
+			]
+		},
+		{
+			"id": "a1fc3d0e-100e-4994-bf4c-526c2244b37c",
+			"name": "Login - as other User",
+			"url": "http://localhost:8080/login",
+			"time": 84,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"User Login should succeed": true
+			},
+			"testPassFailCounts": {
+				"User Login should succeed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				84
+			],
+			"allTests": [
+				{
+					"User Login should succeed": true
+				}
+			]
+		},
+		{
+			"id": "3ea0b939-4b39-409d-996b-921f8c852972",
+			"name": "Get Cart",
+			"url": "http://localhost:8080/cart",
+			"time": 25,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Get cart logged in should succeed": true
+			},
+			"testPassFailCounts": {
+				"Get cart logged in should succeed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				25
+			],
+			"allTests": [
+				{
+					"Get cart logged in should succeed": true
+				}
+			]
+		},
+		{
+			"id": "6df3086c-8d4b-4e2d-a986-12c73816734a",
+			"name": "Add Product to Cart - with auth - should succeed Copy",
+			"url": "http://localhost:8080/cart/products/12",
+			"time": 14,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Add to cart logged in should succeed": true
+			},
+			"testPassFailCounts": {
+				"Add to cart logged in should succeed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Add to cart logged in should succeed": true
+				}
+			]
+		},
+		{
+			"id": "1291cb70-bd4e-4c35-9b3c-3ae0dc4ca623",
+			"name": "Clear Cart Copy",
+			"url": "http://localhost:8080/cart",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Cart should be empty": true
+			},
+			"testPassFailCounts": {
+				"Cart should be empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Cart should be empty": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1549,
+	"collection": {
+		"requests": [
+			{
+				"id": "25ada30b-d4aa-4a0a-a044-a6a17ab02e94",
+				"method": "POST"
+			},
+			{
+				"id": "62bde635-2835-4d8a-be6a-165990c367c4",
+				"method": "POST"
+			},
+			{
+				"id": "8f2dc7a9-f3ea-4b61-b3ca-fdd50872fc5e",
+				"method": "POST"
+			},
+			{
+				"id": "3c36e371-9b8e-44f5-b0bb-4512632514b6",
+				"method": "GET"
+			},
+			{
+				"id": "29801049-6ddb-42f1-b6ed-4b6b310e03b1",
+				"method": "POST"
+			},
+			{
+				"id": "435a7b84-a1d4-469c-9e86-31d2d8643c18",
+				"method": "GET"
+			},
+			{
+				"id": "2975f3c1-b6be-4652-8bf7-dc5fa563663e",
+				"method": "POST"
+			},
+			{
+				"id": "49ecda0e-50f2-4ca0-be00-860c585a2f46",
+				"method": "GET"
+			},
+			{
+				"id": "330160b1-e9ff-4f62-bc85-e1918b2c77ad",
+				"method": "GET"
+			},
+			{
+				"id": "5bdbe37f-7245-4ae0-91f4-827de83cbaed",
+				"method": "PUT"
+			},
+			{
+				"id": "2c91b816-f1b3-4517-b4f4-4252fc294139",
+				"method": "DELETE"
+			},
+			{
+				"id": "da54d76c-af98-4bc6-91e1-b7ea79ce6b5a",
+				"method": "GET"
+			},
+			{
+				"id": "cc62ebbb-380c-4a82-96dd-307b3fd1a690",
+				"method": "GET"
+			},
+			{
+				"id": "7b5efdb2-f582-4816-9a8a-dd267d160820",
+				"method": "POST"
+			},
+			{
+				"id": "37471a4b-b3a8-4290-8ce1-ae11dafdcd95",
+				"method": "GET"
+			},
+			{
+				"id": "b2a42f62-6d95-4854-b213-12acc710ba6b",
+				"method": "POST"
+			},
+			{
+				"id": "a1fc3d0e-100e-4994-bf4c-526c2244b37c",
+				"method": "POST"
+			},
+			{
+				"id": "3ea0b939-4b39-409d-996b-921f8c852972",
+				"method": "GET"
+			},
+			{
+				"id": "6df3086c-8d4b-4e2d-a986-12c73816734a",
+				"method": "POST"
+			},
+			{
+				"id": "1291cb70-bd4e-4c35-9b3c-3ae0dc4ca623",
+				"method": "DELETE"
+			}
+		]
+	}
+}

@@ -1,3 +1,22 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #333;
+}
+
+p {
+    color: #555;
+    font-size: 1rem;
+}
+
+
+
 header
 {
     display: flex;
@@ -7,9 +26,10 @@ header
     height: 10vh;
 
     padding: 5px 15px;
-    border-bottom: solid 1px #555;
+    border-bottom: 2px solid #E64A45;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #F5F0DA;
+    //background-color:  rgba(255, 111, 97, 0.55);
+    background: linear-gradient(90deg, #FF6F61, #FF9D8D);
 
 }
 
@@ -31,7 +51,7 @@ header #links
 
 header #links a {
     text-decoration: none;
-    color: #442D38;
+    color: #fff;
     font-size: 1.4rem;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -54,13 +74,13 @@ header .user-info {
 
 header .user-info span {
     font-size: 1rem;
-    color: #333;
+    color: #fff;
     font-weight: 500;
 }
 
 header .user-info a {
     text-decoration: none;
-    color: #007bff;
+    color: #fff;
     font-size: 1rem;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -90,7 +110,7 @@ header div{
     height: 30px;
     border-radius: 50%;
     cursor: pointer;
-    border: 2px solid transparent;
+    border: 2px solid #fff;
     transition: border 0.3s ease;
 }
 
@@ -141,7 +161,7 @@ main > .filter-box
     width: 350px;
     padding: 20px;
     background-color: #fff;
-    border-radius: 10px;
+    //border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -152,7 +172,7 @@ main > .filter-box
 
 .filter-title {
     font-size: 1.5rem;
-    color: #B45E13;
+    color: rgba(255, 111, 97, 0.55);
     text-align: center;
     margin-bottom: 10px;
     font-weight: bold;
@@ -180,8 +200,8 @@ main > .filter-box
 
  .form-select:hover,
  .form-select:focus {
-     border-color: #DB6A06;
-     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+     border-color: #FF6F61;
+     box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
  }
 
  .form-label {
@@ -252,11 +272,11 @@ main > .content-form .cart-item
     /*width: 30%;*/
     width: 400px; //
     height: 350px; //
-    border: solid 1px #e0e0e0;
-    padding: 15px;
+    border: 1px solid #E5E7EB;
+    padding: 20px;
     border-radius: 12px;
-    margin: 10px;
-    background-color: #fff;
+    margin: 15px;
+    background-color: #ffffff;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease
     text-align: center;
@@ -267,7 +287,7 @@ main > .content-form .cart-item
 
 /* Hover Effect */
 .product:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
@@ -301,7 +321,7 @@ main > .content-form .cart-item
 {
     font-weight: Bold;
     font-size: 1.6em;
-    color: #ff5722;
+    color: #FF6F61;
     margin: 20px 0;
 }
 
@@ -309,11 +329,20 @@ main > .content-form .cart-item
 
     font-size: 1.2em;
     color: #8C8C89;
-    padding: 5px;
+    padding: 10px 0;
     text-overflow: ellipsis;
     overflow: hidden;
+    opacity: 0;
+    animation: fadeInText 0.5s 0.3s forwards;
+}
 
-
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .modal-body img
@@ -337,13 +366,14 @@ main > .content-form .cart-item
     border: none;
     border-radius: 11px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     text-transform: uppercase;
     font-size: 1.2em;
 }
 
 .product .add-button .btn:hover {
-    background-color: #274948;
+    background-color: #256C6A;
+    transform: scale(1.05);
 }
 
 
@@ -363,7 +393,7 @@ main > .content-form .cart-item
     justify-content: center;
     position: absolute;
     top: 0;
-    background-color: #777777aa;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
     z-index: 1000;
@@ -372,6 +402,9 @@ main > .content-form .cart-item
 
 .modal-dialog
 {
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     width: 50vw;
 }
 
