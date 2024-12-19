@@ -93,7 +93,7 @@ class ShoppingCartService {
         cartHeader.classList.add("cart-header");
 
         const h1 = document.createElement("h1");
-        h1.innerText = "Cart";
+        h1.innerText = "Your cart";
         cartHeader.appendChild(h1);
 
         const button = document.createElement("button");
@@ -104,6 +104,12 @@ class ShoppingCartService {
 
         contentDiv.appendChild(cartHeader);
         main.appendChild(contentDiv);
+
+        const totalDiv = document.createElement("div");
+        totalDiv.id = "cart-total";
+        totalDiv.classList.add("cart-total");
+        totalDiv.innerHTML = `<h3>Total: $${this.cart.total.toFixed(2)}</h3>`;
+        contentDiv.appendChild(totalDiv);
 
 
         const itemListContainer = document.createElement("div");
