@@ -56,3 +56,5 @@ Copy code: git clone https://github.com/DeibCR/shoply.git
 
 ## Usage 
 
+**Backend**
+![ Phase 1: 1](https://github.com/DeibCR/shoply/blob/1036ff26cbe6159244ed125fb9328bc510fb1cfb/shoply-backend/src/main/resources/images/phase%201-%201.png)
