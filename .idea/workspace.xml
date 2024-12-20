@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbe8667a-424f-4fc4-a66d-d8a9ad194a28" name="Changes" comment="readme update">
+    <list default="true" id="dbe8667a-424f-4fc4-a66d-d8a9ad194a28" name="Changes" comment="readme update 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/phase 1- 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 1- 1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/phase 1-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 1-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/phase 1-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 1-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/phase 2-Bug 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 2-Bug 2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/phase 2-bug 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 2-bug 1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/phase 3-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 3-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/phase 3-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 3-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/phase 3-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 3-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/phase 3-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 3-4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shoply-frontend/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-frontend/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoply-backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shoply-frontend/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +29,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/pluralsight/DELIcious"
+    "last_opened_file_path": "C:/pluralsight/shoply/shoply-backend"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -89,12 +80,27 @@
       <option name="project" value="LOCAL" />
       <updated>1734644198785</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="readme update">
+      <created>1734700899294</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734700899294</updated>
+    </task>
+    <task id="LOCAL-00006" summary="readme update 2">
+      <created>1734701249352</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1734701249352</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="images for readme added" />
     <MESSAGE value="readme update" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme update" />
+    <MESSAGE value="readme update 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme update 2" />
   </component>
 </project>
