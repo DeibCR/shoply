@@ -57,4 +57,32 @@ Copy code: git clone https://github.com/DeibCR/shoply.git
 ## Usage 
 
 **Backend**
-![ Phase 1-1](phase1-1.png)
+- Phase 1:
+![ Phase 1-1](C:\pluralsight\shoply\shoply-backend\images\phase1-1.png)
+
+![ Phase 1-2](C:\pluralsight\shoply\shoply-backend\images\phase1-2.png)
+
+![ Phase 1-3](C:\pluralsight\shoply\shoply-backend\images\phase1-3.png)
+
+- Phase 2:
+![ Phase 2-1](C:\pluralsight\shoply\shoply-backend\images\phase2-bug-1.png)
+
+![ Phase 2-2](C:\pluralsight\shoply\shoply-backend\images\phase2-Bug-2.png)
+
+- Phase 3:
+![ Phase 3-1](C:\pluralsight\shoply\shoply-backend\images\phase3-1.png)
+
+![ Phase 3-2](C:\pluralsight\shoply\shoply-backend\images\phase3-2.png)
+![ Phase 3-3](C:\pluralsight\shoply\shoply-backend\images\phase3-3.png)
+![ Phase 3-4](C:\pluralsight\shoply\shoply-backend\images\phase3-4.png)
+
+## Acknowledgments
+Special thanks to
+- **Year Up United** for providing the opportunity to develop this project and for supporting the learning journey.
+- **Paul Kimball** my instructor, for all the patience, all the annoying questions to answer and all the coffee ingested to endure them.
+
+## Contact Information
+- Developer: **Deiber Villalobos**
+- Email: **deibcr@gmail.com**
+- GitHub: **Deibcr**
+- Linkedin: **www.linkedin.com/in/deibcr**
