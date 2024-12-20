@@ -77,7 +77,7 @@ Copy code: git clone https://github.com/DeibCR/shoply.git
 ![ Phase 3-4](src/main/images/phase3-4.png)
 
 ## Acknowledgments
-Special thanks to
+Special thanks to:
 - **Year Up United** for providing the opportunity to develop this project and for supporting the learning journey.
 - **Paul Kimball** my instructor, for all the patience, all the annoying questions to answer and all the coffee ingested to endure them.
 
