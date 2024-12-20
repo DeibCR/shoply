@@ -58,7 +58,7 @@ Copy code: git clone https://github.com/DeibCR/shoply.git
 
 **Backend**
 - Phase 1:
-![ Phase 1-1](images\phase1-1.png)
+![ Phase 1-1](shoply-backend/images/phase1-1.png)
 
 ![ Phase 1-2](images\phase1-2.png)
 
