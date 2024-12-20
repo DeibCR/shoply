@@ -58,23 +58,23 @@ Copy code: git clone https://github.com/DeibCR/shoply.git
 
 **Backend**
 - Phase 1:
-![ Phase 1-1](images\phase1-1.png)
+![ Phase 1-1](src/main/images/phase1-1.png)
 
-![ Phase 1-2](images\phase1-2.png)
+![ Phase 1-2](src/main/images/phase1-2.png)
 
-![ Phase 1-3](images\phase1-3.png)
+![ Phase 1-3](src/main/images/phase1-3.png)
 
 - Phase 2:
-![ Phase 2-1](images\phase2-bug-1.png)
+![ Phase 2-1](src/main/images/phase2-bug-1.png)
 
-![ Phase 2-2](images\phase2-Bug-2.png)
+![ Phase 2-2](src/main/images/phase2-Bug-2.png)
 
 - Phase 3:
-![ Phase 3-1](images\phase3-1.png)
+![ Phase 3-1](src/main/images/phase3-1.png)
 
-![ Phase 3-2](images\phase3-2.png)
-![ Phase 3-3](images\phase3-3.png)
-![ Phase 3-4](images\phase3-4.png)
+![ Phase 3-2](src/main/images/phase3-2.png)
+![ Phase 3-3](src/main/images/phase3-3.png)
+![ Phase 3-4](src/main/images/phase3-4.png)
 
 ## Acknowledgments
 Special thanks to
