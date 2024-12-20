@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbe8667a-424f-4fc4-a66d-d8a9ad194a28" name="Changes" comment="readme update 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shoply-backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shoply-frontend/README.md" beforeDir="false" />
-    </list>
+    <list default="true" id="dbe8667a-424f-4fc4-a66d-d8a9ad194a28" name="Changes" comment="readme update 3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +25,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/pluralsight/shoply/shoply-backend"
+    "last_opened_file_path": "C:/pluralsight/shoply"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -94,13 +90,21 @@
       <option name="project" value="LOCAL" />
       <updated>1734701249352</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="readme update 3">
+      <created>1734701992077</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1734701992077</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="images for readme added" />
     <MESSAGE value="readme update" />
     <MESSAGE value="readme update 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme update 2" />
+    <MESSAGE value="readme update 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme update 3" />
   </component>
 </project>
