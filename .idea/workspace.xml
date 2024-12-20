@@ -6,6 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="dbe8667a-424f-4fc4-a66d-d8a9ad194a28" name="Changes" comment="readme update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/phase 1- 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 1- 1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/phase 1-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 1-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/phase 1-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 1-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/phase 2-Bug 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 2-Bug 2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/phase 2-bug 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 2-bug 1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/phase 3-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 3-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/phase 3-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 3-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/phase 3-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 3-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/phase 3-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-backend/images/phase 3-4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shoply-frontend/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/shoply-frontend/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,17 +34,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/pluralsight/shoply&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/pluralsight/DELIcious"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\pluralsight\shoply" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\pluralsight\shoply\shoply-backend" />
       <recent name="C:\pluralsight\shoply\shoply-backend\src\main\resources" />
+      <recent name="C:\pluralsight\shoply\shoply-frontend" />
+      <recent name="C:\pluralsight\shoply" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
